@@ -16,6 +16,8 @@ self.onmessage = async (message) => { // when the worker.js receives a message..
   const wrappedAdd = pyodide.runPython(`
   def add(a,b):
       return a + b
+      
+  add
   `);
 
   try {
