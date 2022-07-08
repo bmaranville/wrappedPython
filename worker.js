@@ -22,6 +22,6 @@ self.onmessage = async (message) => { // when the worker.js receives a message..
     let results = wrappedAdd(message[0], message[1]); // calls the function so that the sum is returned
     self.postMessage(results); // waits to see if the code is completed
   } catch (error) {
-    self.postMessage ({ error: error.message, id }) // sends a message to script.js if there is an error
+    self.postMessage ({ error: error.message }) // sends a message to script.js if there is an error
   }
 };
